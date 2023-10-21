@@ -105,7 +105,7 @@
         }
     ],
     "require": {
-        "phoenix/database": "dev-main",
+        "phoenix/db": "dev-main",
         "phoenix/di": "dev-main",
         "phoenix/logger": "dev-main"
     },
