@@ -1,12 +1,12 @@
 <?php
-namespace Phoenix\Framework\Traits;
+namespace PHPNomad\Framework\Traits;
 
-use Phoenix\Database\Exceptions\TableCreateFailedException;
-use Phoenix\Database\Interfaces\Table;
-use Phoenix\Database\Interfaces\TableCreateStrategy;
-use Phoenix\Di\Container;
-use Phoenix\Di\Exceptions\DiException;
-use Phoenix\Logger\Interfaces\LoggerStrategy;
+use PHPNomad\Database\Exceptions\TableCreateFailedException;
+use PHPNomad\Database\Interfaces\Table;
+use PHPNomad\Database\Interfaces\TableCreateStrategy;
+use PHPNomad\Di\Container;
+use PHPNomad\Di\Exceptions\DiException;
+use PHPNomad\Logger\Interfaces\LoggerStrategy;
 
 trait CanInstallTables
 {
