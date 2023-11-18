@@ -3,23 +3,20 @@
 namespace PHPNomad\Framework\Events;
 
 use PHPNomad\Events\Interfaces\Event;
+use PHPNomad\Framework\Interfaces\MayHaveAssociatedInteractorId;
+use PHPNomad\Framework\Traits\WithAssociatedInteractorId;
 
-class SiteVisited implements Event
+class SiteVisited implements Event, MayHaveAssociatedInteractorId
 {
-    protected ?int $visitorId;
+    use WithAssociatedInteractorId;
 
-    public function __construct(?int $visitorId)
+    public function __construct(?int $associatedId)
     {
-        $this->visitorId = $visitorId;
+        $this->interactorId = $associatedId;
     }
 
     public static function getId(): string
     {
         return 'site_visited';
-    }
-
-    public function getVisitorId(): int
-    {
-        return $this->visitorId;
     }
 }
