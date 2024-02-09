@@ -108,6 +108,7 @@
         "phpnomad/db": "dev-main",
         "phpnomad/di": "dev-main",
         "phpnomad/event": "dev-main",
+        "phpnomad/rest": "dev-main",
         "phpnomad/logger": "dev-main"
     },
     "require-dev": {
