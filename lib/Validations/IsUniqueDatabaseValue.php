@@ -38,7 +38,7 @@ class IsUniqueDatabaseValue implements Validation
 
     public function getErrorMessage(string $key, Request $request): string
     {
-        return "Field $key already exists.";
+        return "$key already exists.";
     }
 
     public function getType(): string
