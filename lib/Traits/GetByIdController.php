@@ -21,6 +21,7 @@ trait GetByIdController
     /** @inheritDoc */
     public function getResponse(Request $request): Response
     {
+        //TODO: UPDATE THIS TO USE RESOLVERS INSTEAD OF RETURNING DATABASE RECORD DIRECTLY.
         $response = clone $this->response;
 
         try {
