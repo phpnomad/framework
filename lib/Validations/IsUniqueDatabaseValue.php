@@ -14,6 +14,10 @@ class IsUniqueDatabaseValue implements Validation
     protected Datastore $datastore;
     protected ?string $existingKey;
 
+    /**
+     * @param Datastore $datastore
+     * @param string|null $existingKey If an existing key is specified, this will return true if the existing record currently has the tested value.
+     */
     public function __construct(Datastore $datastore, ?string $existingKey = null)
     {
         $this->datastore = $datastore;
@@ -28,7 +32,7 @@ class IsUniqueDatabaseValue implements Validation
      */
     public function isValid(string $key, Request $request): bool
     {
-        if($this->existingKey){
+        if ($this->existingKey) {
             try {
                 $existing = $this->datastore->findBy($this->existingKey, $request->getParam($this->existingKey));
             } catch (DatastoreErrorException $e) {
@@ -40,7 +44,7 @@ class IsUniqueDatabaseValue implements Validation
             $found = $this->datastore->findBy($key, $request->getParam($key));
 
             // If this is the same record, this is valid.
-            if(isset($existing) && $found->getIdentity() === $existing->getIdentity()){
+            if (isset($existing) && $found->getIdentity() === $existing->getIdentity()) {
                 return true;
             }
 
@@ -48,7 +52,7 @@ class IsUniqueDatabaseValue implements Validation
         } catch (RecordNotFoundException $e) {
             return true;
         } catch (DatastoreErrorException $e) {
-            throw new ValidationException('Something went wrong when validating the uniqueness of a field.',[], 500);
+            throw new ValidationException('Something went wrong when validating the uniqueness of a field.', [], 500);
         }
     }
 
