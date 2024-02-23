@@ -12,10 +12,12 @@ use PHPNomad\Rest\Interfaces\Validation;
 class IsUniqueDatabaseValue implements Validation
 {
     protected Datastore $datastore;
+    protected ?string $existingKey;
 
-    public function __construct(Datastore $datastore)
+    public function __construct(Datastore $datastore, ?string $existingKey = null)
     {
         $this->datastore = $datastore;
+        $this->existingKey = $existingKey;
     }
 
     /**
@@ -26,13 +28,27 @@ class IsUniqueDatabaseValue implements Validation
      */
     public function isValid(string $key, Request $request): bool
     {
+        if($this->existingKey){
+            try {
+                $existing = $this->datastore->findBy($this->existingKey, $request->getParam($this->existingKey));
+            } catch (DatastoreErrorException $e) {
+                throw new ValidationException('Something went wrong when validating the uniqueness of a field: failed to find existing record.', [], 500);
+            }
+        }
+
         try {
-            $this->datastore->findBy($key, $request->getParam($key));
+            $found = $this->datastore->findBy($key, $request->getParam($key));
+
+            // If this is the same record, this is valid.
+            if(isset($existing) && $found->getIdentity() === $existing->getIdentity()){
+                return true;
+            }
+
             return false;
         } catch (RecordNotFoundException $e) {
             return true;
         } catch (DatastoreErrorException $e) {
-            throw new ValidationException('Something went wrong when validating the uniqueness of a field.',[]);
+            throw new ValidationException('Something went wrong when validating the uniqueness of a field.',[], 500);
         }
     }
 

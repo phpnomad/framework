@@ -2,17 +2,16 @@
 
 namespace PHPNomad\Framework\Traits;
 
+use PHPNomad\Database\Exceptions\RecordNotFoundException;
 use PHPNomad\Datastore\Exceptions\DatastoreErrorException;
-use PHPNomad\Datastore\Exceptions\DuplicateEntryException;
 use PHPNomad\Logger\Interfaces\LoggerStrategy;
 use PHPNomad\Rest\Enums\Method;
-use PHPNomad\Rest\Exceptions\RestException;
 use PHPNomad\Rest\Interfaces\Request;
 use PHPNomad\Rest\Interfaces\Response;
 use Siren\Collaborators\Core\Datastores\Collaborator\Interfaces\CollaboratorDatastore;
 use Siren\Collaborators\Core\Models\Adapters\CollaboratorAdapter;
 
-trait CreateController
+trait UpdateController
 {
     protected Response $response;
     protected CollaboratorDatastore $datastore;
@@ -31,13 +30,11 @@ trait CreateController
     public function getResponse(Request $request): Response
     {
         try {
-            $record = $this->datastore->create($this->buildAttributes($request));
+            $this->datastore->update($request->getParam('id'), $this->buildAttributes($request));
+            $this->response->setStatus(200);
+        } catch (RecordNotFoundException $e) {
             $this->response
-                ->setJson($this->adapter->toArray($record))
-                ->setStatus(201);
-        } catch (DuplicateEntryException $e) {
-            $this->response
-                ->setError('Duplicate entry.', 409);
+                ->setError('No record found with that ID.', 404);
         } catch (DatastoreErrorException $e) {
             $this->logger->logException($e);
 
@@ -50,6 +47,6 @@ trait CreateController
 
     public function getMethod(): string
     {
-        return Method::Post;
+        return Method::Put;
     }
 }
