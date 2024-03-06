@@ -4,19 +4,18 @@ namespace PHPNomad\Framework\Traits;
 
 use PHPNomad\Datastore\Exceptions\DatastoreErrorException;
 use PHPNomad\Datastore\Exceptions\DuplicateEntryException;
+use PHPNomad\Datastore\Interfaces\Datastore;
+use PHPNomad\Datastore\Interfaces\ModelAdapter;
 use PHPNomad\Logger\Interfaces\LoggerStrategy;
 use PHPNomad\Rest\Enums\Method;
-use PHPNomad\Rest\Exceptions\RestException;
 use PHPNomad\Rest\Interfaces\Request;
 use PHPNomad\Rest\Interfaces\Response;
-use Siren\Collaborators\Core\Datastores\Collaborator\Interfaces\CollaboratorDatastore;
-use Siren\Collaborators\Core\Models\Adapters\CollaboratorAdapter;
 
 trait CreateController
 {
     protected Response $response;
-    protected CollaboratorDatastore $datastore;
-    protected CollaboratorAdapter $adapter;
+    protected Datastore $datastore;
+    protected ModelAdapter $adapter;
     protected LoggerStrategy $logger;
 
     /**
