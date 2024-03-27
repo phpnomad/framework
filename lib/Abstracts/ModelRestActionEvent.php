@@ -2,6 +2,7 @@
 
 namespace PHPNomad\Framework\Abstracts;
 
+use PHPNomad\Auth\Enums\ActionTypes;
 use PHPNomad\Rest\Interfaces\Request;
 use PHPNomad\Rest\Interfaces\Response;
 use PHPNomad\Rest\Interfaces\RestActionEvent;
@@ -13,6 +14,11 @@ abstract class ModelRestActionEvent implements RestActionEvent
     protected string $action;
     protected Request $request;
 
+    /**
+     * @param ActionTypes::*&string $action
+     * @param Request $request
+     * @param Response $response
+     */
     public function __construct(string $action, Request $request, Response $response)
     {
         $this->action = $action;

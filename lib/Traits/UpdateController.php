@@ -4,6 +4,8 @@ namespace PHPNomad\Framework\Traits;
 
 use PHPNomad\Database\Exceptions\RecordNotFoundException;
 use PHPNomad\Datastore\Exceptions\DatastoreErrorException;
+use PHPNomad\Datastore\Interfaces\Datastore;
+use PHPNomad\Datastore\Interfaces\ModelAdapter;
 use PHPNomad\Logger\Interfaces\LoggerStrategy;
 use PHPNomad\Rest\Enums\Method;
 use PHPNomad\Rest\Interfaces\Request;
@@ -14,8 +16,8 @@ use Siren\Collaborators\Core\Models\Adapters\CollaboratorAdapter;
 trait UpdateController
 {
     protected Response $response;
-    protected CollaboratorDatastore $datastore;
-    protected CollaboratorAdapter $adapter;
+    protected Datastore $datastore;
+    protected ModelAdapter $adapter;
     protected LoggerStrategy $logger;
 
     /**
@@ -30,7 +32,14 @@ trait UpdateController
     public function getResponse(Request $request): Response
     {
         try {
-            $this->datastore->update($request->getParam('id'), $this->buildAttributes($request));
+            $attributes = $this->buildAttributes($request);
+
+            // Updating a record when there's nothing to update throws an exception.
+            // This ensures that the request continues even if nothing updates.
+            if(!empty($attributes)) {
+                $this->datastore->update($request->getParam('id'), $this->buildAttributes($request));
+            }
+
             $this->response->setStatus(200);
         } catch (RecordNotFoundException $e) {
             $this->response
