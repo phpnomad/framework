@@ -4,6 +4,8 @@ namespace PHPNomad\Framework\Traits;
 
 use PHPNomad\Database\Exceptions\RecordNotFoundException;
 use PHPNomad\Datastore\Exceptions\DatastoreErrorException;
+use PHPNomad\Datastore\Interfaces\Datastore;
+use PHPNomad\Datastore\Interfaces\ModelAdapter;
 use PHPNomad\Logger\Interfaces\LoggerStrategy;
 use PHPNomad\Rest\Enums\Method;
 use PHPNomad\Rest\Interfaces\Request;
@@ -13,9 +15,9 @@ use Siren\Collaborators\Core\Models\Adapters\CollaboratorAdapter;
 
 trait GetByIdController
 {
-    protected CollaboratorDatastore $datastore;
+    protected Datastore $datastore;
     protected Response $response;
-    protected CollaboratorAdapter $adapter;
+    protected ModelAdapter $adapter;
     protected LoggerStrategy $logger;
 
     /** @inheritDoc */
