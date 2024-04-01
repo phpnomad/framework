@@ -4,6 +4,7 @@ namespace PHPNomad\Framework\Traits;
 
 use PHPNomad\Database\Exceptions\RecordNotFoundException;
 use PHPNomad\Datastore\Exceptions\DatastoreErrorException;
+use PHPNomad\Datastore\Interfaces\CanConvertModelToArray;
 use PHPNomad\Datastore\Interfaces\Datastore;
 use PHPNomad\Datastore\Interfaces\ModelAdapter;
 use PHPNomad\Logger\Interfaces\LoggerStrategy;
@@ -17,7 +18,7 @@ trait GetByIdController
 {
     protected Datastore $datastore;
     protected Response $response;
-    protected ModelAdapter $adapter;
+    protected CanConvertModelToArray $adapter;
     protected LoggerStrategy $logger;
 
     /** @inheritDoc */
