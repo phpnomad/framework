@@ -31,17 +31,17 @@ class IdsExist implements Validation
     public function isValid(string $key, Request $request): bool
     {
         try {
-            $found = $this->datastore->findMultiple($request->getParam('programs'));
+            $found = $this->datastore->findMultiple($request->getParam($key));
             $this->invalidIds = Arr::process($found)
                 ->map(fn(Program $program) => $program->getId())
-                ->diff($request->getParam('programs'))
+                ->diff($request->getParam($key))
                 ->toArray();
 
             return empty($this->invalidIds);
         } catch (DatastoreErrorException $e) {
             $this->logger->logException($e);
-            throw new RestException('Something went wrong when validating program IDs',[
-                'programs' => $request->getParam('programs')
+            throw new RestException('Something went wrong when validating IDs',[
+                'ids' => $request->getParam($key)
             ], 500);
         }
     }
