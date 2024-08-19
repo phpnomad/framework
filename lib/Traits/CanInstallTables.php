@@ -4,7 +4,6 @@ namespace PHPNomad\Framework\Traits;
 use PHPNomad\Database\Exceptions\TableCreateFailedException;
 use PHPNomad\Database\Interfaces\Table;
 use PHPNomad\Database\Interfaces\TableCreateStrategy;
-use PHPNomad\Di\Container;
 use PHPNomad\Di\Exceptions\DiException;
 use PHPNomad\Di\Interfaces\InstanceProvider;
 use PHPNomad\Logger\Interfaces\LoggerStrategy;
