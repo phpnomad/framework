@@ -2,7 +2,7 @@
 
 namespace PHPNomad\Framework\Middlewares;
 
-use PHPNomad\Database\Exceptions\RecordNotFoundException;
+use PHPNomad\Datastore\Exceptions\RecordNotFoundException;
 use PHPNomad\Datastore\Exceptions\DatastoreErrorException;
 use PHPNomad\Datastore\Interfaces\Datastore;
 use PHPNomad\Rest\Exceptions\RestException;

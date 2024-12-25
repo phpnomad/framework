@@ -2,7 +2,7 @@
 
 namespace PHPNomad\Framework\Validations;
 
-use PHPNomad\Database\Exceptions\RecordNotFoundException;
+use PHPNomad\Datastore\Exceptions\RecordNotFoundException;
 use PHPNomad\Datastore\Exceptions\DatastoreErrorException;
 use PHPNomad\Datastore\Interfaces\DatastoreHasPrimaryKey;
 use PHPNomad\Logger\Interfaces\LoggerStrategy;

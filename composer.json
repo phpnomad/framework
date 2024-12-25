@@ -27,7 +27,7 @@
         }
     ],
     "require": {
-        "phpnomad/db": "^1.0",
+        "phpnomad/db": "^2.0",
         "phpnomad/di": "^1.0",
         "phpnomad/event": "^1.0",
         "phpnomad/rest": "^1.0",

@@ -2,11 +2,10 @@
 
 namespace PHPNomad\Framework\Traits;
 
-use PHPNomad\Database\Exceptions\RecordNotFoundException;
+use PHPNomad\Datastore\Exceptions\RecordNotFoundException;
 use PHPNomad\Datastore\Exceptions\DatastoreErrorException;
 use PHPNomad\Datastore\Interfaces\CanConvertModelToArray;
 use PHPNomad\Datastore\Interfaces\Datastore;
-use PHPNomad\Datastore\Interfaces\ModelAdapter;
 use PHPNomad\Logger\Interfaces\LoggerStrategy;
 use PHPNomad\Rest\Enums\Method;
 use PHPNomad\Rest\Interfaces\Request;
