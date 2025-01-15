@@ -52,16 +52,16 @@
         },
         {
             "name": "phpnomad/cache",
-            "version": "1.0.0",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpnomad/cache.git",
-                "reference": "2f780019686a654c3d715fadfceac7aab675dc04"
+                "reference": "5304a5cc0444e7ee3171b9dad43ee2d563e40a09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpnomad/cache/zipball/2f780019686a654c3d715fadfceac7aab675dc04",
-                "reference": "2f780019686a654c3d715fadfceac7aab675dc04",
+                "url": "https://api.github.com/repos/phpnomad/cache/zipball/5304a5cc0444e7ee3171b9dad43ee2d563e40a09",
+                "reference": "5304a5cc0444e7ee3171b9dad43ee2d563e40a09",
                 "shasum": ""
             },
             "require": {
@@ -70,7 +70,7 @@
                 "phpnomad/utils": "^1.0"
             },
             "require-dev": {
-                "phpnomad/tests": "^0.1.0"
+                "phpnomad/tests": "^0.1.0 || ^0.3.0"
             },
             "type": "library",
             "autoload": {
@@ -91,9 +91,9 @@
             "homepage": "https://github.com/phpnomad/core",
             "support": {
                 "issues": "https://github.com/phpnomad/cache/issues",
-                "source": "https://github.com/phpnomad/cache/tree/1.0.0"
+                "source": "https://github.com/phpnomad/cache/tree/1.0.2"
             },
-            "time": "2024-12-18T17:04:27+00:00"
+            "time": "2025-01-15T11:37:08+00:00"
         },
         {
             "name": "phpnomad/datastore",
@@ -101,12 +101,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpnomad/datastore.git",
-                "reference": "261897be5d3eb737b8d4db4ab235f87dc6da2fcb"
+                "reference": "1fcee29c6bf8e29ca490c86f21e0bb49b3f70d9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpnomad/datastore/zipball/261897be5d3eb737b8d4db4ab235f87dc6da2fcb",
-                "reference": "261897be5d3eb737b8d4db4ab235f87dc6da2fcb",
+                "url": "https://api.github.com/repos/phpnomad/datastore/zipball/1fcee29c6bf8e29ca490c86f21e0bb49b3f70d9f",
+                "reference": "1fcee29c6bf8e29ca490c86f21e0bb49b3f70d9f",
                 "shasum": ""
             },
             "require-dev": {
@@ -133,20 +133,20 @@
                 "issues": "https://github.com/phpnomad/datastore/issues",
                 "source": "https://github.com/phpnomad/datastore/tree/2.0.0"
             },
-            "time": "2024-12-25T20:10:21+00:00"
+            "time": "2024-12-28T14:35:23+00:00"
         },
         {
             "name": "phpnomad/db",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpnomad/db.git",
-                "reference": "b2de2742d70a8fba289ca95fbc33aa6be6044811"
+                "reference": "d15e7b0d113d976be82983c87df666bb39da670c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpnomad/db/zipball/b2de2742d70a8fba289ca95fbc33aa6be6044811",
-                "reference": "b2de2742d70a8fba289ca95fbc33aa6be6044811",
+                "url": "https://api.github.com/repos/phpnomad/db/zipball/d15e7b0d113d976be82983c87df666bb39da670c",
+                "reference": "d15e7b0d113d976be82983c87df666bb39da670c",
                 "shasum": ""
             },
             "require": {
@@ -178,9 +178,9 @@
             "homepage": "https://github.com/phpnomad/core",
             "support": {
                 "issues": "https://github.com/phpnomad/db/issues",
-                "source": "https://github.com/phpnomad/db/tree/2.0.0"
+                "source": "https://github.com/phpnomad/db/tree/2.0.1"
             },
-            "time": "2024-12-25T20:25:21+00:00"
+            "time": "2025-01-15T11:34:31+00:00"
         },
         {
             "name": "phpnomad/di",
@@ -227,23 +227,23 @@
         },
         {
             "name": "phpnomad/enum-polyfill",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpnomad/enum-polyfill.git",
-                "reference": "6d24b759f566066b30b244cb0584ab7c03da1d0e"
+                "reference": "0502689aa07ddeff67421ed57120f693f096a6ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpnomad/enum-polyfill/zipball/6d24b759f566066b30b244cb0584ab7c03da1d0e",
-                "reference": "6d24b759f566066b30b244cb0584ab7c03da1d0e",
+                "url": "https://api.github.com/repos/phpnomad/enum-polyfill/zipball/0502689aa07ddeff67421ed57120f693f096a6ed",
+                "reference": "0502689aa07ddeff67421ed57120f693f096a6ed",
                 "shasum": ""
             },
             "require": {
                 "phpnomad/singleton": "^1.0"
             },
             "require-dev": {
-                "phpnomad/tests": "^0.1.0"
+                "phpnomad/tests": "^0.1.0 || ^0.3.0"
             },
             "type": "library",
             "autoload": {
@@ -264,9 +264,9 @@
             "homepage": "https://github.com/phpnomad/core",
             "support": {
                 "issues": "https://github.com/phpnomad/enum-polyfill/issues",
-                "source": "https://github.com/phpnomad/enum-polyfill/tree/1.0.0"
+                "source": "https://github.com/phpnomad/enum-polyfill/tree/1.0.1"
             },
-            "time": "2024-12-18T17:03:12+00:00"
+            "time": "2025-01-13T11:51:33+00:00"
         },
         {
             "name": "phpnomad/event",
@@ -5025,10 +5025,10 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {},
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": {},
-    "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
 }
