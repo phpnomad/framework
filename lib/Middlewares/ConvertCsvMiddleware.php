@@ -3,7 +3,7 @@
 namespace PHPNomad\Framework\Middlewares;
 
 use PHPNomad\Rest\Interfaces\Middleware;
-use PHPNomad\Rest\Interfaces\Request;
+use PHPNomad\Http\Interfaces\Request;
 use PHPNomad\Utils\Helpers\Arr;
 
 class ConvertCsvMiddleware implements Middleware
