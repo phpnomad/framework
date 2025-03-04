@@ -7,9 +7,9 @@ use PHPNomad\Datastore\Exceptions\DuplicateEntryException;
 use PHPNomad\Datastore\Interfaces\Datastore;
 use PHPNomad\Datastore\Interfaces\ModelAdapter;
 use PHPNomad\Logger\Interfaces\LoggerStrategy;
-use PHPNomad\Rest\Enums\Method;
-use PHPNomad\Rest\Interfaces\Request;
-use PHPNomad\Rest\Interfaces\Response;
+use PHPNomad\Http\Enums\Method;
+use PHPNomad\Http\Interfaces\Request;
+use PHPNomad\Http\Interfaces\Response;
 
 trait CreateController
 {

@@ -7,7 +7,7 @@ use PHPNomad\Datastore\Exceptions\DatastoreErrorException;
 use PHPNomad\Datastore\Interfaces\DatastoreHasPrimaryKey;
 use PHPNomad\Logger\Interfaces\LoggerStrategy;
 use PHPNomad\Rest\Exceptions\RestException;
-use PHPNomad\Rest\Interfaces\Request;
+use PHPNomad\Http\Interfaces\Request;
 use PHPNomad\Rest\Interfaces\Validation;
 use PHPNomad\Utils\Helpers\Arr;
 use Siren\Collaborators\Core\Models\Program;

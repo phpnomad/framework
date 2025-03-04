@@ -7,7 +7,7 @@ use PHPNomad\Datastore\Exceptions\DatastoreErrorException;
 use PHPNomad\Datastore\Interfaces\Datastore;
 use PHPNomad\Rest\Exceptions\RestException;
 use PHPNomad\Rest\Interfaces\Middleware;
-use PHPNomad\Rest\Interfaces\Request;
+use PHPNomad\Http\Interfaces\Request;
 
 class RecordExistsMiddleware implements Middleware
 {

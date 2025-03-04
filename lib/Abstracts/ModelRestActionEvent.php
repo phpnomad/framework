@@ -3,8 +3,8 @@
 namespace PHPNomad\Framework\Abstracts;
 
 use PHPNomad\Auth\Enums\ActionTypes;
-use PHPNomad\Rest\Interfaces\Request;
-use PHPNomad\Rest\Interfaces\Response;
+use PHPNomad\Http\Interfaces\Request;
+use PHPNomad\Http\Interfaces\Response;
 use PHPNomad\Rest\Interfaces\RestActionEvent;
 
 abstract class ModelRestActionEvent implements RestActionEvent

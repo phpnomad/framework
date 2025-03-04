@@ -6,7 +6,7 @@ use PHPNomad\Datastore\Exceptions\RecordNotFoundException;
 use PHPNomad\Datastore\Exceptions\DatastoreErrorException;
 use PHPNomad\Datastore\Interfaces\Datastore;
 use PHPNomad\Rest\Exceptions\ValidationException;
-use PHPNomad\Rest\Interfaces\Request;
+use PHPNomad\Http\Interfaces\Request;
 use PHPNomad\Rest\Interfaces\Validation;
 
 class IsUniqueDatabaseValue implements Validation

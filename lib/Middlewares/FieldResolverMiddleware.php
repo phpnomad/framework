@@ -4,7 +4,7 @@ namespace PHPNomad\Framework\Middlewares;
 
 use PHPNomad\Registry\Interfaces\CanGet;
 use PHPNomad\Rest\Interfaces\Middleware;
-use PHPNomad\Rest\Interfaces\Request;
+use PHPNomad\Http\Interfaces\Request;
 
 class FieldResolverMiddleware implements Middleware
 {
