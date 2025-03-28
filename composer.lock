@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4c707e31100fcfb2c53b6bafce1c74e2",
+    "content-hash": "36871049bb14a869ba9109df8fcfeddb",
     "packages": [
         {
             "name": "phpnomad/auth",
@@ -398,16 +398,16 @@
         },
         {
             "name": "phpnomad/rest",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpnomad/rest.git",
-                "reference": "bb214f65fa94eff173f0678eafe1840efc74a508"
+                "reference": "4992954efd81ddf0d458725623a776683f2c3e75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpnomad/rest/zipball/bb214f65fa94eff173f0678eafe1840efc74a508",
-                "reference": "bb214f65fa94eff173f0678eafe1840efc74a508",
+                "url": "https://api.github.com/repos/phpnomad/rest/zipball/4992954efd81ddf0d458725623a776683f2c3e75",
+                "reference": "4992954efd81ddf0d458725623a776683f2c3e75",
                 "shasum": ""
             },
             "require": {
@@ -440,9 +440,9 @@
             "homepage": "https://github.com/phpnomad/core",
             "support": {
                 "issues": "https://github.com/phpnomad/rest/issues",
-                "source": "https://github.com/phpnomad/rest/tree/2.0.1"
+                "source": "https://github.com/phpnomad/rest/tree/2.0.2"
             },
-            "time": "2025-01-13T21:24:08+00:00"
+            "time": "2025-03-27T10:10:19+00:00"
         },
         {
             "name": "phpnomad/singleton",
