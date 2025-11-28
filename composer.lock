@@ -137,16 +137,16 @@
         },
         {
             "name": "phpnomad/db",
-            "version": "2.0.4",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpnomad/db.git",
-                "reference": "93773f261e5b3160a6d74a3fec71a36553c559ad"
+                "reference": "072b556b3fb8b50162255364182c7cf04b5c8a41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpnomad/db/zipball/93773f261e5b3160a6d74a3fec71a36553c559ad",
-                "reference": "93773f261e5b3160a6d74a3fec71a36553c559ad",
+                "url": "https://api.github.com/repos/phpnomad/db/zipball/072b556b3fb8b50162255364182c7cf04b5c8a41",
+                "reference": "072b556b3fb8b50162255364182c7cf04b5c8a41",
                 "shasum": ""
             },
             "require": {
@@ -178,9 +178,9 @@
             "homepage": "https://github.com/phpnomad/core",
             "support": {
                 "issues": "https://github.com/phpnomad/db/issues",
-                "source": "https://github.com/phpnomad/db/tree/2.0.4"
+                "source": "https://github.com/phpnomad/db/tree/2.0.5"
             },
-            "time": "2025-05-23T16:30:25+00:00"
+            "time": "2025-11-28T16:50:49+00:00"
         },
         {
             "name": "phpnomad/di",
@@ -5072,10 +5072,10 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }
